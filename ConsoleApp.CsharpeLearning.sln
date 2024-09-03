@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator-coding exercise"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "If Statement Challenges", "If Statement Challenges\If Statement Challenges.csproj", "{93B49D20-4DAB-44FB-9893-CE8E86750E22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "For Loops", "For Loops\For Loops.csproj", "{F5992E46-48A2-418D-88DC-2DB1BA2AC186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "While Loop", "While Loop\While Loop.csproj", "{D4069F35-82AB-447E-8D59-7645DDAFFB5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{93B49D20-4DAB-44FB-9893-CE8E86750E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93B49D20-4DAB-44FB-9893-CE8E86750E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93B49D20-4DAB-44FB-9893-CE8E86750E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5992E46-48A2-418D-88DC-2DB1BA2AC186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5992E46-48A2-418D-88DC-2DB1BA2AC186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5992E46-48A2-418D-88DC-2DB1BA2AC186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5992E46-48A2-418D-88DC-2DB1BA2AC186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4069F35-82AB-447E-8D59-7645DDAFFB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4069F35-82AB-447E-8D59-7645DDAFFB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4069F35-82AB-447E-8D59-7645DDAFFB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4069F35-82AB-447E-8D59-7645DDAFFB5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

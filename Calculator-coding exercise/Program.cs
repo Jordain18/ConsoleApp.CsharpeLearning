@@ -1,22 +1,93 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Welcome  Message 
+using System;
 using System.Numerics;
 
 Console.WriteLine("*********** - Welcome  to the Sample  calculator ! - **************");
 
-Console.WriteLine("Please selct an operation");
+Console.WriteLine("Please selct an operation - ( -1 to exit )");
 Console.WriteLine("1. Addition");
 Console.WriteLine("2. Subtraction");
 Console.WriteLine("3. Multiplication");
 Console.WriteLine("4. Division");
 Console.WriteLine("5.  Modulus");
-int choice = Convert.ToInt32(Console.ReadLine());
-//Prompt  for  user input 
-Console.WriteLine(" Please  enter  the  first  number:");
+Console.WriteLine("6. Fibonacci sequence");
 
-int number1 =Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(" Please  enter  the  second  number:");
-int number2 = Convert.ToInt32(Console.ReadLine());
+int choice = Convert.ToInt32(Console.ReadLine());
+int number1 = 0;
+int number2 = 0;
+while(choice != -1)
+{
+    Console.WriteLine(" Please  enter  the  first  number:");
+
+     number1 =  Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(" Please  enter  the  second  number:");
+     number2= Convert.ToInt32(Console.ReadLine());
+
+    // Using switch case
+    int answer = 0;
+    switch (choice)
+    {
+        case 1:
+            answer = number1 + number2;
+            //int sum = number1 + number2;
+            // Console.WriteLine($" The sum is: {sum}");
+            break;
+
+        case 2:
+            answer = number1 - number2;
+            //int difference = number1 - number2;
+            //Console.WriteLine($" The difference is: {difference}");
+            break;
+        case 3:
+            answer = number1 * number2;
+            //int product = number1 * number2;
+            //Console.WriteLine($"The Product is: {product} ");
+            break;
+        case 4:
+            answer = number1 / number2;
+            //int quotient = number1 / number2;
+            //Console.WriteLine($"The Quotient is: {quotient} ");
+            break;
+        case 5:
+            answer = number1 % number2;
+            //int modulus = number1 % number2;
+
+            //Console.WriteLine($"The Modulus is: {modulus} ");
+            break;
+        case 6:
+            for (int a = number1; a <= number2; a++)
+            {
+                answer += a;
+            }
+
+            break;
+        default:
+            Console.WriteLine("Invalid Input! Have a Nice day.");
+            break;
+    }
+    Console.WriteLine($"The result is : {answer}");
+   
+    Console.WriteLine("Press enter to continue");
+    Console.ReadLine();
+    Console.Clear();
+    Console.WriteLine();
+    Console.WriteLine();
+
+    
+    // Repeat Menu
+    Console.WriteLine("Please selct an operation - ( -1 to exit )");
+    Console.WriteLine("1. Addition");
+    Console.WriteLine("2. Subtraction");
+    Console.WriteLine("3. Multiplication");
+    Console.WriteLine("4. Division");
+    Console.WriteLine("5.  Modulus");
+    Console.WriteLine("6. Fibonacci sequence");
+
+   choice = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine("**** Thank you for  using the calculator *****");
+//Prompt  for  user input 
 
 //Show calculator option /Show menu
 
@@ -53,40 +124,5 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 //    Console.WriteLine("Invalid Input! Have a Nice day.");
 //}
 
-// Using switch case
-int answer =0;
-switch (choice)
-{
-    case 1:
-        answer = number1 + number2;
-        //int sum = number1 + number2;
-        // Console.WriteLine($" The sum is: {sum}");
-        break;
 
-        case 2:
-        answer = number1 - number2;
-        //int difference = number1 - number2;
-        //Console.WriteLine($" The difference is: {difference}");
-        break;
-    case 3:
-        answer = number1 * number2;
-        //int product = number1 * number2;
-        //Console.WriteLine($"The Product is: {product} ");
-        break;
-        case 4:
-        answer = number1 / number2;
-        //int quotient = number1 / number2;
-        //Console.WriteLine($"The Quotient is: {quotient} ");
-        break;
-    case 5:
-        answer = number1 % number2;
-        //int modulus = number1 % number2;
-
-        //Console.WriteLine($"The Modulus is: {modulus} ");
-        break;
-    default:
-        Console.WriteLine("Invalid Input! Have a Nice day.");
-        break;
-}
 //print output
-Console.WriteLine($"The result is : {answer}");
