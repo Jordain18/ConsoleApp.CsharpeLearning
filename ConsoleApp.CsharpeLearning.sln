@@ -15,11 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionsandDecisions", "I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator-coding exercise", "Calculator-coding exercise\Calculator-coding exercise.csproj", "{C2356FC3-3FB8-4100-A361-95D2543611C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "If Statement Challenges", "If Statement Challenges\If Statement Challenges.csproj", "{93B49D20-4DAB-44FB-9893-CE8E86750E22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "If Statement Challenges", "If Statement Challenges\If Statement Challenges.csproj", "{93B49D20-4DAB-44FB-9893-CE8E86750E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "For Loops", "For Loops\For Loops.csproj", "{F5992E46-48A2-418D-88DC-2DB1BA2AC186}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "For Loops", "For Loops\For Loops.csproj", "{F5992E46-48A2-418D-88DC-2DB1BA2AC186}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "While Loop", "While Loop\While Loop.csproj", "{D4069F35-82AB-447E-8D59-7645DDAFFB5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "While Loop", "While Loop\While Loop.csproj", "{D4069F35-82AB-447E-8D59-7645DDAFFB5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Handling Exception Errors", "Handling Exception Errors\Handling Exception Errors.csproj", "{878ED2A5-2EAC-4F61-86D6-B59E1BC7EAF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{D4069F35-82AB-447E-8D59-7645DDAFFB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4069F35-82AB-447E-8D59-7645DDAFFB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4069F35-82AB-447E-8D59-7645DDAFFB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{878ED2A5-2EAC-4F61-86D6-B59E1BC7EAF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878ED2A5-2EAC-4F61-86D6-B59E1BC7EAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878ED2A5-2EAC-4F61-86D6-B59E1BC7EAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878ED2A5-2EAC-4F61-86D6-B59E1BC7EAF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
