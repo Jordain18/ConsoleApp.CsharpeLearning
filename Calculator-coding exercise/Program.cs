@@ -11,15 +11,7 @@ while(choice != -1)
 {
     try
     {
-        Console.WriteLine("*********** - Welcome  to the Sample  calculator ! - **************");
-
-        Console.WriteLine("Please selct an operation - ( -1 to exit )");
-        Console.WriteLine("1. Addition");
-        Console.WriteLine("2. Subtraction");
-        Console.WriteLine("3. Multiplication");
-        Console.WriteLine("4. Division");
-        Console.WriteLine("5.  Modulus");
-        Console.WriteLine("6. Fibonacci sequence");
+        PrintMenu();
         
             choice = Convert.ToInt32(Console.ReadLine());
       
@@ -43,24 +35,24 @@ while(choice != -1)
         switch (choice)
         {
             case 1:
-                answer = number1 + number2;
-                //int sum = number1 + number2;
-                // Console.WriteLine($" The sum is: {sum}");
+                answer = AdditionOperation(number1 ,number2);
+                
                 break;
 
             case 2:
-                answer = number1 - number2;
+
+                answer = SubtractionOperation(number1, number2);
                 //int difference = number1 - number2;
                 //Console.WriteLine($" The difference is: {difference}");
                 break;
             case 3:
-                answer = number1 * number2;
+                answer = MultiplicationOperation(number1,number2);
                 //int product = number1 * number2;
                 //Console.WriteLine($"The Product is: {product} ");
                 break;
             case 4:
 
-                   answer = number1 / number2;
+                answer = DivisionOperation(number1,number2); 
                 
                 
               
@@ -68,16 +60,14 @@ while(choice != -1)
                 //Console.WriteLine($"The Quotient is: {quotient} ");
                 break;
             case 5:
-                answer = number1 % number2;
+                answer = ModulusOperation(number1,number2); 
                 //int modulus = number1 % number2;
 
                 //Console.WriteLine($"The Modulus is: {modulus} ");
                 break;
             case 6:
-                for (int a = number1; a <= number2; a++)
-                {
-                    answer += a;
-                }
+                answer= Fibonnaci(number1,number2);
+             
 
                 break;
             default:
@@ -117,7 +107,56 @@ while(choice != -1)
 
 
 }
+
+int Fibonnaci(int number1, int number2)
+{
+    var answer = 0;
+    for (int a = number1; a <= number2; a++)
+    {
+        answer += a;
+    }
+    return answer;
+}
+
 Console.WriteLine("**** Thank you for  using the calculator *****");
+
+// Methods Go here
+void PrintMenu()
+{
+    Console.Clear();
+    Console.WriteLine("*********** - Welcome  to the Sample  calculator ! - **************");
+
+    Console.WriteLine("Please selct an operation - ( -1 to exit )");
+    Console.WriteLine("1. Addition");
+    Console.WriteLine("2. Subtraction");
+    Console.WriteLine("3. Multiplication");
+    Console.WriteLine("4. Division");
+    Console.WriteLine("5.  Modulus");
+    Console.WriteLine("6. Fibonacci sequence");
+}
+int AdditionOperation(int number1, int number2)
+{
+    return number1 + number2;
+
+}
+
+int SubtractionOperation(int number1, int number2)
+{
+    return number1 - number2;
+}
+int MultiplicationOperation(int number1, int number2)
+{
+    return number1 * number2;
+}
+
+int DivisionOperation(int number1, int number2)
+{
+    return number1 / number2;
+}
+int ModulusOperation(int number1, int number2)
+{
+    return number1 % number2;
+}
 //Prompt  for  user input 
 
 //Show calculator option /Show menu
