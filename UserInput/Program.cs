@@ -1,20 +1,18 @@
 ﻿// Declare Variables
 using System.Globalization;
 using System.Xml.Linq;
-
+char choice =char.MinValue;
 string? myFirstName = string.Empty;
 string? myLastName = string.Empty;
 int myAge ;
 DateOnly dob = new DateOnly();
-
- const int retirementAge = 65;
-
 decimal salary ;
 char gender = char.MinValue;
 bool working=true;
-try
-{
-    //Prompt  user for input 
+List<Person> persons = new List<Person>();
+
+while (choice != 'E')
+{  //Prompt  user for input 
     Console.Write("Please  insert your first name ");
     myFirstName = Console.ReadLine();
     Console.Write("Please  insert your last name ");
@@ -29,24 +27,49 @@ try
     gender = Convert.ToChar(Console.ReadLine());
     Console.Write("Are you employed ? (true or false)");
     working = Convert.ToBoolean(Console.ReadLine());
+
+    Person person = new(dob)
+    {
+        FirstName = myFirstName,
+        LastName = myLastName,
+
+        Gender = gender,
+        Salary = salary,
+        IsWorking = working
+    };
     //Process the Data
-    int workingYearsRemaining = retirementAge - myAge;
-    var estimatedRetirementDate = DateTime.Now.AddYears(workingYearsRemaining);
-    Console.WriteLine($"Full name is :{myFirstName + " " + myLastName}");
-    Console.WriteLine($"Age : {myAge}");
 
-    Console.WriteLine($"Your is  salary : {salary.ToString("C")}");
-    Console.WriteLine($"You are  is gender: {gender}");
-    Console.WriteLine($"  Are you employed ? : {working}");
-    Console.WriteLine($"Working years Remaining  : {workingYearsRemaining}");
-    Console.WriteLine($"Estimated Retirement year  : {estimatedRetirementDate.Year}");
+    persons.Add(person);
+    //persons.Add(new Person(dob)
+
+    //{
+    //    FirstName = myFirstName,
+    //    LastName = myLastName,
+
+    //    Gender = gender,
+    //    Salary = salary,
+    //    IsWorking = working
+    //}
+    //    );
+
+
+    Console.WriteLine(" C - Continue | E- Exit");
+
+    choice = Convert.ToChar(Console.ReadLine());
 }
-catch (Exception)
+foreach (var person in persons)
 {
+    Console.WriteLine();
+    Console.WriteLine($"Full name is :{person.ToString()}");
+    Console.WriteLine($"Age : {person.GetAge()}");
 
-	Console.WriteLine(" Invalid Input");
+    Console.WriteLine($"Your is  salary : {person.Salary.ToString("C")}");
+    Console.WriteLine($"You are  is gender: {person.Gender}");
+    Console.WriteLine($"  Are you employed ? : {person.IsWorking}");
+    Console.WriteLine($"Working years Remaining  : {person.GetNumberOfWorkingYearsRemaining()}");
+    Console.WriteLine($"Estimated Retirement year  : {person.GetEstimatedRetirementDate()}");
+
+
 }
-
-//Output the results to the user
 
 
